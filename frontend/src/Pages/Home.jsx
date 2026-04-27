@@ -14,7 +14,6 @@ import BgAnimation from "../Components/GlobBackground/Bganimation";
 import EarthHero from "../Components/GlobBackground/Earthhero";
 import Banner from "../Components/HomeComponents/HeroSection/Banner";
 import VortexBackground from "../Components/GlobBackground/VortexBackground";
-import SciFiTunnel from "../Components/GlobBackground/Scifitunnel/Scifitunnel";
 
 const useReveal = () => {
     useEffect(() => {
