@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import "../CSS/DatacenterColocation.css";
+import "../CSS/DataCenterColocation.css";
 import heroBg from "../assets/banner/data-center.png";
 import onboardBg from "../assets/img1.png"; // This is imported but not used
 import {
