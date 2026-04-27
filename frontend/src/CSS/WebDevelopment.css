@@ -1,0 +1,1102 @@
+/* ============================
+   WebDevelopment Page Styles
+   ============================ */
+
+/* ---------- Page Wrapper ---------- */
+.webdev-page {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: visible;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+/* ---------- Motion / Animations ---------- */
+.webdev-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.webdev-reveal-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes webdevFloat {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* ========================================
+   SECTION 7 - HERO
+   ======================================== */
+.webdev-hero-section {
+  width: 100%;
+  padding: 60px 0 0 0;
+  min-height: 520px;
+  height: 650px;
+
+  background:
+    linear-gradient(to right, rgba(89,88,88), rgba(255,255,255,0)),
+    url("../assets/banner/Web-development-dott.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+.webdev-hero-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 8%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* ---------- Hero Left ---------- */
+.webdev-hero-left {
+  flex: 0 0 45%;
+  padding-top: 30px;
+}
+
+/* Premium Badge */
+.webdev-premium-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border: 2px solid #3B5BFF;
+  border-radius: 50px;
+  background: #ffffff;
+  margin-bottom: 28px;
+}
+
+.webdev-premium-badge-icon {
+  font-size: 18px;
+  color: #3B5BFF;
+}
+
+.webdev-premium-badge span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #3B5BFF;
+  letter-spacing: 0.2px;
+}
+
+/* Hero Heading */
+.webdev-hero-heading {
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #1a1a2e;
+  margin: 0 0 32px 0;
+  letter-spacing: -0.5px;
+}
+
+.webdev-hero-highlight {
+  color: #3B5BFF;
+}
+
+/* Hero Buttons */
+.webdev-hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.webdev-btn-get-started {
+  padding: 14px 32px;
+  background: #233DFE;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.webdev-btn-get-started:hover {
+  background: #2a45d6;
+  transform: translateY(-1px);
+}
+
+.webdev-btn-view-demo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: #f0f0f5;
+  color: #1a1a2e;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.webdev-btn-view-demo:hover {
+  background: #e4e4ec;
+  transform: translateY(-1px);
+}
+
+.webdev-btn-demo-icon {
+  font-size: 20px;
+  color: #3B5BFF;
+}
+
+/* ---------- Hero Right (Illustration) ---------- */
+.webdev-hero-right {
+  flex: 0 0 50%;
+  position: relative;
+  min-height: 460px;
+}
+
+.webdev-hero-illustration {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.webdev-hero-main-img {
+  width: 100%;
+  height: auto;
+  max-width: 650px;
+  object-fit: contain;
+  animation: webdevFloat 4s ease-in-out infinite;
+  filter: drop-shadow(0 20px 40px rgba(59, 91, 255, 0.15));
+}
+
+
+/* ========================================
+   SECTION 9 - STATS
+   ======================================== */
+.webdev-stats-section {
+  width: 100%;
+  background: #3B5BFF;
+  padding: 40px 0;
+  margin-top: 0;
+}
+
+.webdev-stats-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 8%;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.webdev-stat-card {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 24px 32px;
+  text-align: left;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  cursor: pointer;
+}
+
+.webdev-stat-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.webdev-stat-value {
+  font-size: 30px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+  letter-spacing: -1px;
+}
+
+.webdev-stat-label {
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  letter-spacing: 0.1px;
+}
+
+
+/* ========================================
+   SERVICES SECTION
+   ======================================== */
+.webdev-services-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 80px 0;
+}
+
+.webdev-services-header {
+  width: 100%;
+  margin: 0 auto 60px auto;
+  padding: 0 8%;
+  text-align: center;
+}
+
+.webdev-services-subtitle {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  color: #000000;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.webdev-services-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #3B5BFF;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.3px;
+}
+
+.webdev-services-desc {
+  font-size: 15px;
+  font-weight: 400;
+  color: #6b7280;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.webdev-services-grid {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 8%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.webdev-service-card {
+  background: #ffffff;
+  border: 1.5px solid #f1f5f9;
+  border-radius: 24px;
+  padding: 40px 32px;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 12px 12px 35px rgba(0, 0, 0, 0.04);
+}
+
+.webdev-service-card:hover {
+  box-shadow: 0 30px 60px rgba(59, 91, 255, 0.15);
+  transform: translateY(-12px);
+  border-color: #3B5BFF;
+}
+
+.webdev-service-icon-box {
+  width: 55px;
+  height: 55px;
+  border-radius: 12px;
+  background: #EEF1FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #135BEC;
+  margin-bottom: 20px;
+}
+
+.webdev-service-card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 10px 0;
+}
+
+.webdev-service-card-desc {
+  font-size: 14px;
+  font-weight: 400;
+  color: #6b7280;
+  line-height: 1.65;
+  margin: 0 0 18px 0;
+}
+
+.webdev-service-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3B5BFF;
+  text-decoration: none;
+  transition: gap 0.25s ease;
+}
+
+.webdev-service-card-link:hover {
+  gap: 10px;
+}
+
+.webdev-service-link-arrow {
+  font-size: 14px;
+  transition: transform 0.25s ease;
+}
+
+.webdev-service-card-link:hover .webdev-service-link-arrow {
+  transform: translateX(3px);
+}
+
+
+/* ========================================
+   TECH STACK SECTION
+   ======================================== */
+.webdev-techstack-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 0 0 80px 0;
+}
+
+.webdev-techstack-header {
+  width: 100%;
+  margin: 0 auto 60px auto;
+  padding: 0 8%;
+  text-align: center;
+}
+
+.webdev-techstack-subtitle {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  color: #3B5BFF;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.webdev-techstack-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #3B5BFF;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.3px;
+}
+
+.webdev-techstack-desc {
+  font-size: 15px;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.webdev-techstack-columns {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 8%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.webdev-techstack-column {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  padding: 32px 28px;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.webdev-techstack-column:hover {
+  box-shadow: 0 20px 40px rgba(59, 91, 255, 0.12);
+  transform: translateY(-8px);
+  border-color: rgba(59, 91, 255, 0.2);
+}
+
+.webdev-techstack-column-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 0 20px 0;
+}
+
+.webdev-techstack-category-icon {
+  font-size: 20px;
+  color: #233DFE;
+  display: flex;
+  align-items: center;
+}
+
+.webdev-techstack-category-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #233DFE;
+  margin: 0;
+}
+
+.webdev-techstack-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.webdev-techstack-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  background: #ffffff;
+  border: 1px solid #d4dbf5;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+
+.webdev-techstack-item:hover {
+  border-color: #3B5BFF;
+  box-shadow: 0 8px 20px rgba(59, 91, 255, 0.08);
+  transform: translateX(5px);
+}
+
+.webdev-techstack-item-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #EEF1FF;
+  color: #3B5BFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.webdev-techstack-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.webdev-techstack-item-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #233DFE;
+}
+
+.webdev-techstack-item-desc {
+  font-size: 12px;
+  font-weight: 400;
+  color: #9ca3af;
+}
+
+
+/* ========================================
+   LIFECYCLE TIMELINE SECTION
+   ======================================== */
+.webdev-lifecycle-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 70px 0 0 0;
+}
+
+.webdev-lifecycle-main {
+  width: 100%;
+  background: #f8faff;
+  padding: 80px 0;
+}
+
+.webdev-lifecycle-header {
+  width: 100%;
+  margin: 0 auto 40px auto;
+  padding: 0 8%;
+  text-align: center;
+}
+
+.webdev-lifecycle-badge {
+  display: inline-block;
+  padding: 6px 20px;
+  background: #ecefff;
+  color: #233DFE;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.webdev-lifecycle-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #3B5BFF;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.3px;
+}
+
+.webdev-lifecycle-desc {
+  font-size: 15px;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Timeline container */
+.webdev-lifecycle-timeline {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+}
+
+/* Vertical center line */
+.webdev-lifecycle-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1.5px;
+  background: #D9D9D9;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+/* Each timeline row */
+.webdev-lifecycle-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.webdev-lifecycle-row:last-child {
+  margin-bottom: 0;
+}
+
+/* Left and Right columns */
+.webdev-lifecycle-left,
+.webdev-lifecycle-right {
+  flex: 1;
+  padding: 0 30px;
+}
+
+.webdev-lifecycle-left {
+  text-align: right;
+}
+
+.webdev-lifecycle-right {
+  text-align: left;
+}
+
+/* Center dot */
+.webdev-lifecycle-center {
+  flex-shrink: 0;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.webdev-lifecycle-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #3B5BFF;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 10px rgba(59, 91, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.webdev-lifecycle-dot::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 28px;
+  height: 28px;
+  background: rgba(59, 91, 255, 0.15);
+  border: 1px solid rgba(59, 91, 255, 0.2);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.webdev-lifecycle-dot::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 42px;
+  height: 42px;
+  background: rgba(59, 91, 255, 0.05);
+  border-radius: 50%;
+  z-index: -2;
+}
+
+/* Keep dot consistent */
+.webdev-lifecycle-row:hover .webdev-lifecycle-dot {
+  transform: none;
+}
+
+/* Title block (plain text side) */
+.webdev-lifecycle-title-block {
+  padding: 20px 0;
+}
+
+.webdev-lifecycle-step-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 6px 0;
+}
+
+.webdev-lifecycle-step-desc {
+  font-size: 16px;
+  font-weight: 300;
+  color: #000000;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Card block (icon + desc, with bg) */
+.webdev-lifecycle-card {
+  background: #ffffff;
+  border: none;
+  border-radius: 16px;
+  padding: 22px 28px;
+  text-align: left;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.03);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Center content vertically for even look */
+  gap: 10px;
+  min-height: 130px;
+  /* More compact height */
+}
+
+/* Align ALL left-side content (cards and text) to the right (closer to the line) */
+.webdev-lifecycle-left .webdev-lifecycle-card,
+.webdev-lifecycle-left .webdev-lifecycle-title-block {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Align left-side card icon specifically */
+.webdev-lifecycle-left .webdev-lifecycle-card-icon {
+  justify-content: flex-end;
+}
+
+.webdev-lifecycle-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+.webdev-lifecycle-card-icon {
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  background: none;
+  color: #3B5BFF;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 20px;
+  box-shadow: none;
+  border: none;
+  transition: all 0.3s ease;
+  margin-bottom: 4px;
+}
+
+.webdev-lifecycle-card:hover .webdev-lifecycle-card-icon {
+  transform: scale(1.1);
+  color: #135BEC;
+}
+
+.webdev-lifecycle-card-text {
+  font-size: 14px;
+  font-weight: 400;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Remove icon padding since icons are now inline */
+.webdev-lifecycle-row-left .webdev-lifecycle-right .webdev-lifecycle-card-text,
+.webdev-lifecycle-row-right .webdev-lifecycle-left .webdev-lifecycle-card-text {
+  padding: 0;
+}
+
+
+/* ========================================
+   FAQ SECTION
+   ======================================== */
+.webdev-faq-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 60px 0;
+}
+
+.webdev-faq-header {
+  max-width: 1440px;
+  margin: 0 auto 80px auto;
+  padding: 0 80px;
+  text-align: center;
+}
+
+.webdev-faq-title {
+  font-size: 36px;
+  font-weight: 600;
+  color: #3B5BFF;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.3px;
+}
+
+.webdev-faq-subtitle {
+  font-size: 15px;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.webdev-faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.webdev-faq-item {
+  background: #ffffff;
+  border: 1px solid #eef0f6;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.webdev-faq-item:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.webdev-faq-item-active {
+  border-color: #3B5BFF;
+  box-shadow: 0 12px 40px rgba(59, 91, 255, 0.12);
+}
+
+.webdev-faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  gap: 20px;
+}
+
+.webdev-faq-question span {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.webdev-faq-chevron {
+  font-size: 16px;
+  color: #3B5BFF;
+  flex-shrink: 0;
+}
+
+.webdev-faq-answer {
+  padding: 0 28px 24px 28px;
+  background: #ffffff;
+}
+
+.webdev-faq-answer p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #6b7280;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ========================================
+   CTA SECTION
+   ======================================== */
+.webdev-cta-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 0 0 100px 0;
+}
+
+.webdev-cta-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px;
+  background: linear-gradient(135deg, #2540ff 0%, #3B5BFF 100%);
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.webdev-cta-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.3px;
+}
+
+.webdev-cta-desc {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.65;
+  margin: 0;
+  max-width: 500px;
+}
+
+.webdev-cta-button {
+  padding: 16px 36px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1.5px solid #ffffff;
+  color: #ffffff;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.webdev-cta-button:hover {
+  background: #ffffff;
+  color: #233DFE;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 992px) {
+  .webdev-hero-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .webdev-hero-left {
+    flex: unset;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .webdev-hero-heading {
+    font-size: 34px;
+  }
+
+  .webdev-hero-right {
+    flex: unset;
+    width: 100%;
+    max-width: 500px;
+    min-height: 380px;
+  }
+
+  .webdev-hero-illustration {
+    height: 380px;
+  }
+
+  .webdev-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .webdev-techstack-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .webdev-cta-container {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .webdev-hero-section {
+    padding: 40px 0 0 0;
+  }
+
+  .webdev-hero-heading {
+    font-size: 28px;
+  }
+
+  .webdev-stats-container {
+    flex-wrap: wrap;
+  }
+
+  .webdev-stat-card {
+    flex: 0 0 calc(50% - 10px);
+  }
+
+  .webdev-hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .webdev-btn-get-started,
+  .webdev-btn-view-demo {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .webdev-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .webdev-techstack-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .webdev-services-title,
+  .webdev-techstack-title,
+  .webdev-lifecycle-title {
+    font-size: 28px;
+  }
+
+  .webdev-lifecycle-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    margin-bottom: 50px;
+  }
+
+  .webdev-lifecycle-left,
+  .webdev-lifecycle-right {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .webdev-lifecycle-row-left .webdev-lifecycle-left {
+    order: 1;
+  }
+
+  .webdev-lifecycle-row-left .webdev-lifecycle-right {
+    order: 2;
+  }
+
+  .webdev-lifecycle-row-right .webdev-lifecycle-right {
+    order: 1;
+  }
+
+  .webdev-lifecycle-row-right .webdev-lifecycle-left {
+    order: 2;
+  }
+
+  .webdev-lifecycle-center {
+    display: none;
+  }
+
+  .webdev-lifecycle-line {
+    display: none;
+  }
+
+  .webdev-lifecycle-card {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .webdev-lifecycle-card-icon {
+    position: static;
+    margin: 0 auto 15px auto;
+  }
+
+  .webdev-lifecycle-card-text {
+    padding: 0 !important;
+    text-align: center;
+  }
+
+  .webdev-faq-title,
+  .webdev-cta-title {
+    font-size: 28px;
+  }
+
+  .webdev-faq-question {
+    padding: 20px;
+  }
+
+  .webdev-cta-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .webdev-hero-container,
+  .webdev-stats-container,
+  .webdev-services-section,
+  .webdev-techstack-section,
+  .webdev-lifecycle-section,
+  .webdev-faq-section,
+  .webdev-cta-section {
+    padding: 40px 15px !important;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .webdev-hero-heading {
+    font-size: 26px;
+  }
+
+  .webdev-stat-value {
+    font-size: 32px;
+  }
+
+  .webdev-services-title,
+  .webdev-techstack-title,
+  .webdev-lifecycle-title,
+  .webdev-faq-title,
+  .webdev-cta-title {
+    font-size: 24px;
+  }
+
+  .webdev-cta-container {
+    margin: 0 5%;
+    padding: 30px 15px;
+    border-radius: 24px;
+  }
+
+  .webdev-cta-button {
+    width: 100%;
+    padding: 14px 20px;
+  }
+}

@@ -1,0 +1,103 @@
+/* Quote.css — Dark CTA with architectural layout */
+/* @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap'); */
+
+.dtc-quote-section {
+  position: relative;
+  padding: 0;
+  background: #233dfe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.quote-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background: rgba(5,9,26,0.82);
+  /* backdrop-filter: blur(16px); */
+  /* -webkit-backdrop-filter: blur(16px); */
+  padding: 80px 80px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Decorative glow */
+.quote-container::before {
+  content: '';
+  position: absolute;
+  top: -200px; left: 50%;
+  transform: translateX(-50%);
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(35,61,254,0.14) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+/* Top rule */
+.quote-container::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 10%; right: 10%; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--blue), transparent);
+}
+
+.quote-title {
+  /* font-family: 'DM Sans', sans-serif; */
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 28px;
+}
+
+.quote-subtitle {
+  /* font-family: 'Syne', sans-serif; */
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.04em;
+  line-height: 1.0;
+  margin-bottom: 24px;
+  max-width: 700px;
+}
+
+.quote-text {
+  font-family: 'DM Sans', sans-serif;
+  color: rgb(204, 203, 203) !important;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  margin-bottom: 48px;
+  max-width: 480px;
+  font-weight: 300;
+}
+
+.quote-btn {
+  background: var(--blue);
+  border: none;
+  padding: 16px 52px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 40px rgba(35,61,254,0.3);
+}
+.quote-btn:hover {
+  background: var(--blue-dark);
+  box-shadow: 0 0 60px rgba(35,61,254,0.5);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .quote-container { padding: 70px 32px; }
+  .quote-subtitle { font-size: 2.2rem; }
+}

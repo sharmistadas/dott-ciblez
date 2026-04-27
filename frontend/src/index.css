@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Clash+Display:wght@600;700;800&family=Satoshi:wght@300;400;500;600;700&display=swap');
+
+
+
+:root {
+
+  /* ── Primary Brand Blue ──────────────────────────────────────────────── */
+  --blue:           #233dfe;   /* main CTA, accents, active states          */
+  --blue-dark:      #0a1a93;   /* hover state of --blue                     */
+  --blue-deeper:    #0d6efd;   /* Bootstrap-compatible deep blue            */
+  --blue-light:     #818cf8;   /* lighter tint, gradients                   */
+  --blue-xlight:    #a5b4fc;   /* very light, subtle highlights             */
+
+  /* ── Blue alpha utilities (use with rgba() via CSS color-mix or direct) */
+  --blue-a02:       rgba(35, 61, 254, 0.02);
+  --blue-a05:       rgba(35, 61, 254, 0.05);
+  --blue-a06:       rgba(35, 61, 254, 0.06);
+  --blue-a07:       rgba(35, 61, 254, 0.07);
+  --blue-a08:       rgba(35, 61, 254, 0.08);
+  --blue-a10:       rgba(35, 61, 254, 0.10);
+  --blue-a12:       rgba(35, 61, 254, 0.12);
+  --blue-a13:       rgba(35, 61, 254, 0.13);
+  --blue-a14:       rgba(35, 61, 254, 0.14);
+  --blue-a15:       rgba(35, 61, 254, 0.15);
+  --blue-a16:       rgba(35, 61, 254, 0.16);
+  --blue-a18:       rgba(35, 61, 254, 0.18);
+  --blue-a20:       rgba(35, 61, 254, 0.20);
+  --blue-a25:       rgba(35, 61, 254, 0.25);
+  --blue-a30:       rgba(35, 61, 254, 0.30);
+  --blue-a35:       rgba(35, 61, 254, 0.35);
+  --blue-a40:       rgba(35, 61, 254, 0.40);
+  --blue-a45:       rgba(35, 61, 254, 0.45);
+  --blue-a85:       rgba(35, 61, 254, 0.85);
+  --blue-a88:       rgba(35, 61, 254, 0.88);
+  --blue-a92:       rgba(35, 61, 254, 0.92);
+
+  /* ── Text Colors ─────────────────────────────────────────────────────── */
+  --text-dark:      #0d1333;   /* headings, card titles                     */
+  --text-mid:       #4a5180;   /* body text, descriptions                   */
+  --text-muted:     #6b7494;   /* captions, secondary text                  */
+  --text-muted-alt: #555e7a;   /* team description, slightly darker muted   */
+  --text-quote:     #2a3050;   /* testimonial quotes */
+  --text-white:#ffffff;                       
+
+  /* ── Backgrounds ─────────────────────────────────────────────────────── */
+  --bg-page:        #ffffff;   /* html/body base, Three.js canvas bg        */
+  --bg-white:       #ffffff;   /* solid white surfaces                      */
+  --bg-card:        rgba(255, 255, 255, 0.55);  /* default glassmorphism card */
+  --bg-card-hover:  rgba(255, 255, 255, 0.78);  /* card hover state          */
+  --bg-card-solid:  rgba(255, 255, 255, 0.60);  /* slightly more opaque card */
+  --bg-badge:       rgba(255, 255, 255, 0.60);  /* about badges              */
+
+  /* ── Dark Surfaces (kept for legacy / Navbar dark mode) ─────────────── */
+  --dark-navy:      #0d1333;   /* same as text-dark, deep navy              */
+  --dark-deep:      #071c36;   /* very deep navy                            */
+  --dark-mid:       #1a1f3a;   /* mid-depth dark                            */
+  --dark-soft:      #2a2f4a;   /* softer dark surface                       */
+  --dark-quote:     #2a3050;   /* quote/blockquote dark                     */
+
+  /* ── Borders ─────────────────────────────────────────────────────────── */
+  --border:         rgba(35, 61, 254, 0.14);   /* default card border       */
+  --border-light:   rgba(35, 61, 254, 0.08);   /* very subtle divider       */
+  --border-strong:  #233dfe;                   /* active / hover border     */
+  --border-white:   rgba(255, 255, 255, 0.90); /* image frames, badge rings */
+  --border-white-10:rgba(255, 255, 255, 0.10); /* stat card border          */
+  --border-white-15:rgba(255, 255, 255, 0.15); /* glass shimmer border      */
+  /* -------Border Radius---------------------------------------------------------- */
+  
+
+  /* ── Shadows ─────────────────────────────────────────────────────────── */
+  --shadow-card:    0 4px 20px rgba(35, 61, 254, 0.07);
+  --shadow-card-hover: 0 14px 40px rgba(35, 61, 254, 0.18);
+  --shadow-btn:     0 8px 28px rgba(35, 61, 254, 0.30);
+  --shadow-btn-hover: 0 14px 40px rgba(35, 61, 254, 0.40);
+  --shadow-stat:    0 8px 25px rgba(35, 61, 254, 0.25);
+  --shadow-img:     0 15px 30px rgba(35, 61, 254, 0.15);
+  --shadow-years:   0 10px 25px rgba(35, 61, 254, 0.40);
+  --shadow-navbar:  0 2px 16px rgba(0, 0, 0, 0.08);
+  --shadow-black-sm:0 4px 20px rgba(0, 0, 0, 0.05);
+
+  /* ── Glassmorphism ───────────────────────────────────────────────────── */
+
+  --glass-blur:     blur(12px);
+  --glass-blur-lg:  blur(14px);
+  --glass-blur-xl:  blur(20px);
+
+  /* ── Gradients ───────────────────────────────────────────────────────── */
+  --gradient-blue:        linear-gradient(135deg, #030d5d, #8691f4);
+  --gradient-blue-h:      linear-gradient(90deg,  #233dfe, #818cf8);
+  --gradient-blue-btn:    linear-gradient(90deg,  #233dfe, #4c6fff);
+  --gradient-top-bar:     linear-gradient(90deg,  #233dfe, #818cf8, #233dfe);
+  --gradient-glass-shine: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
+
+  /* ── Spacing / Radius ────────────────────────────────────────────────── */
+  --radius-sm:   8px;
+  --radius-md:   12px;
+  --radius-lg:   16px;
+  --radius-xl:   18px;
+  --radius-2xl:  20px;
+  --radius-3xl:  24px;
+  --radius-pill: 100px;
+  --radius-full: 50%;
+
+  /* ── Transitions ─────────────────────────────────────────────────────── */
+  --transition-fast:   all 0.25s ease;
+  --transition-base:   all 0.30s ease;
+  --transition-smooth: all 0.35s ease;
+  --transition-spring: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slide:  transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ── Typography ──────────────────────────────────────────────────────── */
+--font-display:  'Clash Display', sans-serif !important;
+  --font-body:    "DM Sans", system-ui, sans-serif;
+  --font-body:    system-ui, -apple-system, sans-serif;
+}
+
+/* ── Global Resets ────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background: var(--bg-page) !important;
+ font-family: 'Clash Display', sans-serif !important;
+  color: var(--text-dark);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+  background: transparent !important;
+  isolation: isolate;
+}
+
+.section-tag{
+      /* display: inline-block; */
+    background: var(--blue-a08);
+    color: var(--blue);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--blue-a20);
+    margin-bottom: 15px;
+}
+.home-title{
+    font-family: 'Clash Display', sans-serif;
+    font-size: clamp(2.8rem, 5.5vw, 4.4rem);
+    font-weight: bolder;
+    color: #ffffff;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    margin-bottom: 14px;
+}

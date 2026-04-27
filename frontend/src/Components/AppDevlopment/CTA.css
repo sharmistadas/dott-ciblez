@@ -1,0 +1,189 @@
+/* ================= CTA SECTION ================= */
+
+.cta-section {
+  padding: 120px 8%;
+  /* background: white; */
+}
+
+.cta-container {
+  background: linear-gradient(90deg, #2f4cff, #2356d6);
+  border-radius: 18px;
+  padding: 70px 40px;
+  text-align: center;
+  color: white;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* HEADING */
+
+.cta-container h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* TEXT */
+
+.cta-container p {
+  max-width: 650px;
+  margin: 0 auto 35px auto;
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.85);
+}
+
+/* FORM */
+
+.cta-form {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+
+}
+
+/* INPUT */
+
+.cta-form input {
+  width: 300px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: #4777f1;
+}
+
+.cta-form input::placeholder {
+  color: white;
+  opacity: 2;
+}
+/* BUTTON */
+
+.cta-form button {
+  background: white;
+  color: #2f4cff;
+  padding: 14px 28px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  
+}
+
+.cta-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+/* ================= RESPONSIVE ADDITIONS ================= */
+
+/* For tablets and smaller desktops */
+@media screen and (max-width: 1024px) {
+  .cta-section {
+    padding: 100px 5%;
+  }
+  
+  .cta-container {
+    padding: 60px 30px;
+  }
+  
+  .cta-container h2 {
+    font-size: 32px;
+  }
+}
+
+/* For tablets */
+@media screen and (max-width: 768px) {
+  .cta-section {
+    padding: 80px 5%;
+  }
+  
+  .cta-container {
+    padding: 50px 25px;
+  }
+  
+  .cta-container h2 {
+    font-size: 28px;
+  }
+  
+  .cta-container p {
+    font-size: 14px;
+    margin-bottom: 30px;
+    padding: 0 15px;
+  }
+  
+  .cta-form input {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+/* For mobile phones */
+@media screen and (max-width: 480px) {
+  .cta-section {
+    padding: 60px 4%;
+  }
+  
+  .cta-container {
+    padding: 40px 20px;
+    border-radius: 15px;
+  }
+  
+  .cta-container h2 {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+  
+  .cta-container p {
+    font-size: 13px;
+    margin-bottom: 25px;
+    padding: 0 10px;
+  }
+  
+  .cta-form {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+  
+  .cta-form input {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+  
+  .cta-form button {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
+
+/* For very small phones */
+@media screen and (max-width: 320px) {
+  .cta-section {
+    padding: 40px 3%;
+  }
+  
+  .cta-container {
+    padding: 30px 15px;
+  }
+  
+  .cta-container h2 {
+    font-size: 20px;
+  }
+  
+  .cta-container p {
+    font-size: 12px;
+  }
+  
+  .cta-form input,
+  .cta-form button {
+    padding: 10px 14px;
+    font-size: 12px;
+  }
+}

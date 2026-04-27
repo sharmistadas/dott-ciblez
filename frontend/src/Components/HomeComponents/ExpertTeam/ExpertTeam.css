@@ -1,0 +1,374 @@
+/* ============================================================
+   ExpertTeam — Modern dark design
+   All classNames prefixed with: tm-
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Clash+Display:wght@600;700;800&family=Satoshi:wght@300;400;500;600;700&display=swap');
+
+/* ── Section ─────────────────────────────────────────────── */
+.tm-section {
+  position: relative;
+  padding: 120px 0 100px;
+  /* background: #050814; */
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* ── Background orbs ─────────────────────────────────────── */
+.tm-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(110px);
+  pointer-events: none;
+  z-index: 0;
+}
+.tm-orb--1 {
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(35, 61, 254, 0.16) 0%, transparent 70%);
+  top: -180px;
+  right: -120px;
+}
+.tm-orb--2 {
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(167, 139, 250, 0.12) 0%, transparent 70%);
+  bottom: -100px;
+  left: -100px;
+}
+
+/* ── Grid overlay ────────────────────────────────────────── */
+.tm-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 54px 54px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+.tm-header {
+  text-align: center;
+  margin-bottom: 72px;
+  position: relative;
+  z-index: 2;
+}
+
+.tm-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+.tm-eyebrow__dash {
+  display: block;
+  width: 36px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(102,126,234,0.8), transparent);
+}
+.tm-eyebrow__label {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(102, 126, 234, 0.85);
+}
+
+.tm-title {
+  font-family: 'Clash Display', sans-serif;
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  margin-bottom: 18px;
+}
+.tm-title__accent {
+  background: linear-gradient(135deg, #667eea 0%, #a78bfa 60%, #4facfe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tm-desc {
+  font-family: 'Satoshi', sans-serif;
+  color: rgb(209, 209, 209) !important;
+  font-size: 0.93rem;
+  max-width: 440px;
+  margin: 0 auto;
+  line-height: 1.85;
+  font-weight: 300;
+}
+
+/* ── Card ────────────────────────────────────────────────── */
+.tm-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.38s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+.tm-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-20);
+  background: rgba(255,255,255,0.045);
+  box-shadow:
+    0 0 0 1px var(--accent-20),
+    0 24px 60px rgba(0, 0, 0, 0.55),
+    0 0 50px var(--accent-20);
+}
+
+/* ── Image area ──────────────────────────────────────────── */
+.tm-img-wrap {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.tm-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), filter 0.4s ease;
+  filter: grayscale(30%) brightness(0.85);
+}
+.tm-card:hover .tm-img {
+  transform: scale(1.08);
+  filter: grayscale(0%) brightness(1);
+}
+
+/* Gradient overlay on image */
+.tm-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    rgba(5, 8, 20, 0.85) 100%
+  );
+  z-index: 1;
+}
+
+/* Index number */
+.tm-index {
+  position: absolute;
+  top: 16px;
+  left: 18px;
+  font-family: 'Clash Display', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.2);
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+.tm-card:hover .tm-index {
+  color: var(--accent);
+  opacity: 0.7;
+}
+
+/* Accent strip top-right corner */
+.tm-img-strip {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3px;
+  height: 0;
+  background: var(--accent);
+  z-index: 2;
+  transition: height 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 0 12px var(--accent);
+}
+.tm-card:hover .tm-img-strip {
+  height: 60px;
+}
+
+/* Social links */
+.tm-social {
+  position: absolute;
+  bottom: -56px;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 20px;
+  background: linear-gradient(to top, rgba(5, 8, 20, 0.92) 0%, transparent 100%);
+  transition: bottom 0.38s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.tm-card:hover .tm-social {
+  bottom: 0;
+}
+
+.tm-social__link {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+.tm-social__link:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  box-shadow: 0 0 14px var(--accent-20);
+}
+
+/* ── Info area ───────────────────────────────────────────── */
+.tm-info {
+  padding: 24px 22px 22px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tm-info__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.tm-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+  margin-top: 5px;
+  box-shadow: 0 0 8px var(--accent);
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.tm-card:hover .tm-dot {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.tm-name {
+  font-family: 'Clash Display', sans-serif;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 5px;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.tm-position {
+  font-family: 'Satoshi', sans-serif;
+  color: var(--accent);
+  font-size: 0.75rem;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  opacity: 0.85;
+}
+
+.tm-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.05);
+  margin-bottom: 14px;
+  transition: background 0.3s ease;
+}
+.tm-card:hover .tm-divider {
+  background: var(--accent-20);
+}
+
+.tm-bio {
+  font-family: 'Satoshi', sans-serif;
+  color: rgb(215, 214, 214);
+  font-size: 0.8rem;
+  line-height: 1.75;
+  margin: 0 0 18px;
+  font-weight: 300;
+  flex-grow: 1;
+  transition: color 0.3s ease;
+}
+.tm-card:hover .tm-bio {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.tm-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: 'Satoshi', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgb(215, 214, 214);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  margin-top: auto;
+  transition: color 0.25s ease, gap 0.25s ease;
+}
+.tm-link svg {
+  transition: transform 0.25s ease;
+}
+.tm-card:hover .tm-link {
+  color: var(--accent);
+  gap: 10px;
+}
+.tm-card:hover .tm-link svg {
+  transform: translateX(3px);
+}
+
+/* Bottom bar sweep */
+.tm-card__bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.tm-card:hover .tm-card__bar {
+  transform: scaleX(1);
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 992px) {
+  .tm-section {
+    padding: 90px 0 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tm-section {
+    padding: 72px 0 60px;
+  }
+  .tm-header {
+    margin-bottom: 48px;
+  }
+  .tm-title {
+    font-size: 2.2rem;
+  }
+}

@@ -1,0 +1,11 @@
+module.exports = {
+  ROLES: {
+    USER: 'user',
+    ADMIN: 'admin',
+  },
+  PAGINATION: {
+    DEFAULT_PAGE: 1,
+    DEFAULT_LIMIT: 10,
+    MAX_LIMIT: 100,
+  },
+};

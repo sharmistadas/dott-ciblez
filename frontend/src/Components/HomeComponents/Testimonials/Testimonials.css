@@ -1,0 +1,316 @@
+/* ============================================================
+   Testimonials — modern dark-glass design
+   All classNames prefixed with: test-
+   ============================================================ */
+
+
+/* ── Section Shell ────────────────────────────────────────── */
+.test-section {
+  position: relative;
+  padding: 120px 0 100px;
+  /* background: #06080f; */
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* ── Decorative blobs ─────────────────────────────────────── */
+.test-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
+}
+.test-blob--1 {
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(35, 61, 254, 0.22) 0%, transparent 70%);
+  top: -120px;
+  left: -140px;
+}
+.test-blob--2 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(102, 16, 242, 0.16) 0%, transparent 70%);
+  bottom: -80px;
+  right: -80px;
+}
+
+/* ── Grid overlay ─────────────────────────────────────────── */
+.test-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.022) 1px, transparent 1px);
+  background-size: 52px 52px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Header ───────────────────────────────────────────────── */
+.test-header {
+  text-align: center;
+  margin-bottom: 72px;
+  position: relative;
+  z-index: 2;
+}
+
+.test-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+.test-eyebrow__line {
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(35,61,254,0.7), transparent);
+}
+.test-eyebrow__text {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(102, 126, 234, 0.9);
+}
+
+.test-title {
+  font-family: 'Clash Display', sans-serif;
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 18px;
+}
+.test-title__accent {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.test-desc {
+  font-family: 'Satoshi', sans-serif;
+  color: rgb(223, 221, 221) !important;
+  max-width: 420px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+/* ── Card ─────────────────────────────────────────────────── */
+.test-card {
+  background: rgba(255, 255, 255, 0.035);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  padding: 36px 32px 30px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.35s ease,
+              box-shadow 0.35s ease;
+  cursor: default;
+}
+
+/* Coloured top accent bar per card */
+.test-card__accent {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  border-radius: 20px 20px 0 0;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.test-card--1 .test-card__accent {
+  background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+}
+.test-card--2 .test-card__accent {
+  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.test-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(102, 126, 234, 0.25);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(102,126,234,0.1);
+}
+.test-card:hover .test-card__accent {
+  transform: scaleX(1);
+}
+
+/* Glow bubble that follows card on hover */
+.test-card__glow {
+  position: absolute;
+  bottom: -60px;
+  right: -60px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(102, 126, 234, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+.test-card:hover .test-card__glow {
+  opacity: 1;
+}
+
+/* ── Card Top Row ─────────────────────────────────────────── */
+.test-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.test-tag {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(102, 126, 234, 0.85);
+  background: rgba(102, 126, 234, 0.1);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  padding: 4px 12px;
+  border-radius: 30px;
+}
+
+.test-quote-icon {
+  color: rgba(255, 255, 255, 0.07);
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+/* ── Stars ────────────────────────────────────────────────── */
+.test-rating {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 18px;
+}
+.test-star {
+  color: #f6c90e;
+  font-size: 0.82rem;
+  filter: drop-shadow(0 0 4px rgba(246,201,14,0.5));
+}
+
+/* ── Quote text ───────────────────────────────────────────── */
+.test-quote {
+  font-family: 'Satoshi', sans-serif;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.93rem;
+  line-height: 1.88;
+  margin-bottom: 28px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* ── Author ───────────────────────────────────────────────── */
+.test-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 22px;
+}
+
+.test-author__img-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+.test-author__img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+.test-author__ring {
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  z-index: 0;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+.test-card:hover .test-author__ring {
+  opacity: 1;
+}
+
+.test-author__info {
+  min-width: 0;
+}
+.test-author__name {
+  font-family: 'Clash Display', sans-serif;
+  color: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.test-author__pos {
+  font-family: 'Satoshi', sans-serif;
+  color: rgba(102, 126, 234, 0.8);
+  font-size: 0.76rem;
+  margin: 0;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Navigation dots ──────────────────────────────────────── */
+.test-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 56px;
+  position: relative;
+  z-index: 2;
+}
+.test-nav__dot {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.test-nav__dot--active {
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  width: 32px;
+  border-radius: 4px;
+}
+.test-nav__dot:hover:not(.test-nav__dot--active) {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .test-section {
+    padding: 80px 0 70px;
+  }
+  .test-header {
+    margin-bottom: 48px;
+  }
+  .test-card {
+    padding: 28px 24px 24px;
+  }
+}

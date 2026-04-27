@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Share+Tech+Mono&display=swap');
+
+/* ═══════════════════════════════════════
+   PAGE SHELL
+═══════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+.tunnel-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #000510;
+  overflow: hidden;
+  font-family: 'Orbitron', monospace;
+}
+
+/* ── Three.js canvas ── */
+.tunnel-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.tunnel-canvas canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* ═══════════════════════════════════════
+   OVERLAY
+═══════════════════════════════════════ */
+.tunnel-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 36px 36px;
+  pointer-events: none;
+}
+
+/* ── Top HUD bar ── */
+.tunnel-hud-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hud-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0,170,255,.5), rgba(0,170,255,.15));
+  animation: linePulse 3s ease-in-out infinite;
+}
+.hud-line-left  { transform: scaleX(-1); }
+
+@keyframes linePulse {
+  0%,100% { opacity: .5; }
+  50%     { opacity: 1; }
+}
+
+.hud-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0,20,60,.75);
+  border: 1px solid rgba(0,170,255,.4);
+  border-radius: 4px;
+  padding: 6px 18px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: clamp(9px, 1.2vw, 11px);
+  color: rgba(0,200,255,.85);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  box-shadow: 0 0 16px rgba(0,170,255,.15),
+              inset 0 0 12px rgba(0,170,255,.05);
+}
+
+.hud-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: #00eeff;
+  box-shadow: 0 0 8px #00eeff, 0 0 14px rgba(0,238,255,.6);
+  animation: dotBlink 1.4s ease-in-out infinite;
+}
+@keyframes dotBlink {
+  0%,100% { opacity: 1; }
+  50%     { opacity: .3; }
+}
+
+/* ── Center text ── */
+.tunnel-center-text {
+  text-align: center;
+  animation: fadeSlide .8s ease both;
+}
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.tunnel-heading {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(1.8rem, 6vw, 5rem);
+  font-weight: 900;
+  color: rgba(255,255,255,.92);
+  line-height: 1.05;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 20px rgba(0,170,255,.8),
+    0 0 60px rgba(0,80,200,.5);
+  margin-bottom: 14px;
+}
+.tunnel-heading span {
+  color: #00ccff;
+  text-shadow:
+    0 0 12px #00ccff,
+    0 0 40px rgba(0,204,255,.7),
+    0 0 80px rgba(0,150,255,.4);
+}
+
+.tunnel-subtext {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: clamp(.65rem, 1.4vw, .9rem);
+  color: rgba(0,200,255,.6);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/* ── Bottom HUD stats ── */
+.tunnel-hud-bottom {
+  display: flex;
+  gap: clamp(20px, 5vw, 80px);
+  align-items: flex-end;
+}
+
+.hud-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.hud-stat-label {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: clamp(8px, 1vw, 10px);
+  color: rgba(0,170,255,.55);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+.hud-stat-val {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(.85rem, 2vw, 1.4rem);
+  font-weight: 700;
+  color: rgba(0,220,255,.9);
+  text-shadow: 0 0 12px rgba(0,204,255,.6);
+  animation: valPulse 2s ease-in-out infinite;
+}
+@keyframes valPulse {
+  0%,100% { opacity: .9; }
+  50%     { opacity: 1; text-shadow: 0 0 20px rgba(0,204,255,.9); }
+}
+
+/* ═══════════════════════════════════════
+   CORNER BRACKETS
+═══════════════════════════════════════ */
+.corner-tl, .corner-tr, .corner-bl, .corner-br {
+  position: absolute;
+  width: 28px; height: 28px;
+  z-index: 11;
+  pointer-events: none;
+}
+.corner-tl { top: 16px;  left:  16px; border-top:  2px solid rgba(0,170,255,.6); border-left:  2px solid rgba(0,170,255,.6); }
+.corner-tr { top: 16px;  right: 16px; border-top:  2px solid rgba(0,170,255,.6); border-right: 2px solid rgba(0,170,255,.6); }
+.corner-bl { bottom:16px;left:  16px; border-bottom:2px solid rgba(0,170,255,.6); border-left:  2px solid rgba(0,170,255,.6); }
+.corner-br { bottom:16px;right: 16px; border-bottom:2px solid rgba(0,170,255,.6); border-right: 2px solid rgba(0,170,255,.6); }
+
+/* ── Scanline overlay ── */
+.tunnel-page::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    rgba(0,0,0,.07) 3px,
+    rgba(0,0,0,.07) 4px
+  );
+  pointer-events: none;
+  z-index: 12;
+}
+
+/* ── Vignette ── */
+.tunnel-page::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 30%,
+    rgba(0,2,20,.65) 100%
+  );
+  pointer-events: none;
+  z-index: 9;
+}
+
+/* ═══════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════ */
+@media (max-width: 600px) {
+  .tunnel-overlay { padding: 20px 18px 24px; }
+  .hud-badge      { padding: 5px 12px; letter-spacing: 1.5px; }
+  .tunnel-heading { letter-spacing: 3px; }
+  .tunnel-hud-bottom { gap: 28px; }
+  .corner-tl,.corner-tr,.corner-bl,.corner-br { width:20px; height:20px; }
+}

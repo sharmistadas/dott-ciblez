@@ -1,0 +1,172 @@
+
+.tech-section {
+
+  padding: 120px 0;
+  color: var(--text-dark);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Glow top */
+.tech-section::before {
+  content: '';
+  position: absolute;
+  top: -200px; left: 50%;
+  transform: translateX(-50%);
+  width: 600px; height: 600px;
+  /* background: radial-gradient(circle, rgba(35,61,254,0.12) 0%, transparent 65%); */
+  pointer-events: none;
+}
+
+/* Bottom border line */
+.tech-section::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 10%; right: 10%; height: 1px;
+  /* background: linear-gradient(90deg, transparent, rgba(35,61,254,0.4), transparent); */
+}
+
+.tech-header { text-align: center; margin-bottom: 72px; position: relative; z-index: 1; }
+
+.tech-eyebrow {
+display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    padding: 6px 16px;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 24px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+.tech-desc{
+    color: rgb(215, 214, 214) !important;
+}
+.abt-badge-dot {
+    width: 7px;
+    height: 7px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.tech-header h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #fff;
+  letter-spacing: -0.04em;
+  margin-bottom: 16px;
+}
+.tech-header h1 span { color: var(--blue); }
+
+.tech-header p {
+  font-family: 'DM Sans', sans-serif;
+  color: rgba(255,255,255,0.3);
+  max-width: 540px;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  line-height: 1.85;
+  font-weight: 300;
+}
+
+/* Process step cards */
+.hm-tech-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 2px;
+  padding: 40px 28px;
+  height: 100%;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: 0 0 10px #686868;
+}
+.hm-tech-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 2px;
+  background: var(--gradient-blue-h);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+.hm-tech-card:hover {
+  border-color: rgba(35,61,254,0.2);
+  background: rgba(35,61,254,0.04);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.3);
+}
+.hm-tech-card:hover::before { transform: scaleX(1); }
+
+.icon-box {
+  width: 52px; height: 52px;
+  border-radius: 10px;
+  background: rgba(35,61,254,0.1);
+  border: 1px solid rgba(35,61,254,0.2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; color: var(--blue);
+  transition: all 0.3s ease;
+  margin-bottom: 24px;
+  box-shadow: 0 0 10px rgba(35,61,254);
+}
+.hm-tech-card:hover .icon-box {
+  background: var(--blue);
+  color: #fff;
+  border-color: var(--blue);
+  transform: rotate(-8deg);
+}
+
+.step-numbers {
+  font-family: 'Syne', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: rgb(215, 215, 217);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.hm-tech-card h5 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+}
+.hm-tech-card p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.3);
+  line-height: 1.75;
+  font-weight: 300;
+  margin: 0;
+}
+
+.journey-btn {
+  background: var(--blue);
+  border: none;
+  padding: 16px 56px;
+  border-radius: 3px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 40px rgba(35,61,254,0.3);
+}
+.journey-btn:hover {
+  background: var(--blue-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 0 60px rgba(35,61,254,0.5);
+}
+
+@media (max-width: 768px) {
+  .tech-section { padding: 80px 0; }
+  .tech-header h1 { font-size: 2rem; }
+}

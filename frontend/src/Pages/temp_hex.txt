@@ -1,0 +1,23 @@
+0000	69 6d 70 6f 72 74 20 52  65 61 63 74 2c 20 7b 20   import React, { 
+0010	75 73 65 53 74 61 74 65  20 7d 20 66 72 6f 6d 20   useState } from 
+0020	22 72 65 61 63 74 22 3b  0d 0a 69 6d 70 6f 72 74   "react";..import
+0030	20 22 2e 2e 2f 43 53 53  2f 42 75 73 69 6e 65 73    "../CSS/Busines
+0040	73 43 6f 6e 73 75 6c 74  61 6e 63 79 53 65 72 76   sConsultancyServ
+0050	69 63 65 73 2e 63 73 73  22 3b 0d 0a 69 6d 70 6f   ices.css";..impo
+0060	72 74 20 7b 20 46 61 43  68 65 63 6b 43 69 72 63   rt { FaCheckCirc
+0070	6c 65 2c 20 46 61 55 73  65 72 73 2c 20 46 61 43   le, FaUsers, FaC
+0080	68 61 72 74 4c 69 6e 65  2c 20 46 61 47 6c 6f 62   hartLine, FaGlob
+0090	65 2c 20 46 61 4c 69 67  68 74 62 75 6c 62 2c 20   e, FaLightbulb, 
+00a0	46 61 52 6f 62 6f 74 2c  20 46 61 50 72 6f 6a 65   FaRobot, FaProje
+00b0	63 74 44 69 61 67 72 61  6d 2c 20 46 61 43 6c 6f   ctDiagram, FaClo
+00c0	75 64 2c 20 46 61 43 69  74 79 2c 20 46 61 43 6f   ud, FaCity, FaCo
+00d0	64 65 2c 20 46 61 48 6f  73 70 69 74 61 6c 2c 20   de, FaHospital, 
+00e0	46 61 55 6e 69 76 65 72  73 69 74 79 2c 20 46 61   FaUniversity, Fa
+00f0	53 68 6f 70 70 69 6e 67  42 61 67 2c 20 46 61 41   ShoppingBag, FaA
+0100	72 72 6f 77 52 69 67 68  74 2c 20 46 61 49 6e 64   rrowRight, FaInd
+0110	75 73 74 72 79 2c 20 46  61 52 6f 63 6b 65 74 2c   ustry, FaRocket,
+0120	20 46 61 53 68 69 65 6c  64 41 6c 74 2c 20 46 61    FaShieldAlt, Fa
+0130	52 65 67 43 6c 6f 63 6b  2c 20 46 61 44 6f 6c 6c   RegClock, FaDoll
+0140	61 72 53 69 67 6e 2c 20  46 61 43 68 65 76 72 6f   arSign, FaChevro
+0150	6e 44 6f 77 6e 20 7d 20  66 72 6f 6d 20 22 72 65   nDown } from "re
+0160	61 63 74 2d 69 63 6f 6e  73 2f 66 61 22 3b 0d 0a   act-icons/fa";..
