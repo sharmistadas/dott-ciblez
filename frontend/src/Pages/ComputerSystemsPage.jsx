@@ -370,12 +370,11 @@ export default function ComputerSystemsPage() {
                     {[
                         {
                             name: "IBM",
-                            logo: new URL("../assets/images/Ibm.png", import.meta.url).href,
+                            logo: "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg&w=400&output=webp",
                         },
                         {
                             name: "NVIDIA",
-                            logo: new URL("../assets/images/Nvidia.png", import.meta.url)
-                                .href,
+                            logo: "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/2/21/Nvidia_logo.svg&w=400&output=webp",
                         },
                         {
                             name: "AWS",
@@ -391,8 +390,7 @@ export default function ComputerSystemsPage() {
                         },
                         {
                             name: "Lenovo",
-                            logo: new URL("../assets/images/lenovo.png", import.meta.url)
-                                .href,
+                            logo: "https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/b/b8/Lenovo_logo_2015.svg&w=400&output=webp",
                         },
                         {
                             name: "Palo Alto",
@@ -462,7 +460,7 @@ export default function ComputerSystemsPage() {
                             tag: "BPO",
                             title: "CallCenter Plus",
                             metric: "VoIP for 1000 agents",
-                            img: new URL("../assets/images/ecommerce.png", import.meta.url)
+                            img: new URL("../assets/images/ecommerce.jpeg", import.meta.url)
                                 .href,
                         },
                     ].map((d, i) => (

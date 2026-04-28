@@ -36,7 +36,7 @@ const Counter = ({ value, suffix, decimals = 0 }) => {
 
     return <span ref={ref}>{count}{suffix}</span>;
 };
-import ITInfrastructure from "../assets/network-world.png"
+import ITInfrastructure from "../assets/network-world.PNG"
 
 export default function ITNetworkServices() {
     return (
